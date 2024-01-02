@@ -9,6 +9,9 @@ FROM registry.access.redhat.com/ubi8/nginx-118
 
 
 COPY ./files/mynginx.conf /opt/app-root/etc/nginx.d/mynginx.conf
+COPY ./files/mynginx2.conf /opt/app-root/etc/nginx.default.d/mynginx.conf
+
+
 
 # Run script uses standard ways to run the application
 CMD nginx -g "daemon off;"
